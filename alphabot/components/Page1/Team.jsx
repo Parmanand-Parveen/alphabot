@@ -4,7 +4,7 @@ import React from 'react';
 import { FaTelegram, FaInstagram } from 'react-icons/fa';
 
 const OurTeam = () => {
-  // Replace with actual image URLs
+
   const teamMembers = [
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTuOHNXWduLt7WbuhKFsIU3pV0vyhEOPodmLnHB_pPNnCWblb3vjRoR7hKTuRE9cZSgy8&usqp=CAU",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTuOHNXWduLt7WbuhKFsIU3pV0vyhEOPodmLnHB_pPNnCWblb3vjRoR7hKTuRE9cZSgy8&usqp=CAU",

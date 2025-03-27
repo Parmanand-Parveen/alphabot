@@ -11,6 +11,10 @@ import OurTeam from '@/components/Page1/Team';
 import { AnimatedTestimonialsDemo } from '@/components/Page1/Review';
 import FAQSection from '@/components/Page1/Faq';
 import Footer from '@/components/Page1/Footer';
+import Landingpage2 from '@/components/Page1/LandingPage2';
+import DcaSection2 from '@/components/Page1/DcaSection2';
+import { TimelineDemo } from '@/components/Page1/TimeLine';
+import Footer2 from '@/components/Page1/Footer2';
 
 
 const Home = () => {
@@ -18,10 +22,11 @@ const {scrollYProgress} = useScroll();
 
   return (
     <div className=' overflow-x-hidden dark:bg-gray-900 font-serif'>
-       <Landingpage/>
+       <Landingpage2/>
        <StatsSection/>
+       <TimelineDemo/>
        <StepsSection/>
-       <DCASetup/>
+       <DcaSection2/>
        <ChooseUs/>
        <OurTeam/>
        <AnimatedTestimonialsDemo/>
