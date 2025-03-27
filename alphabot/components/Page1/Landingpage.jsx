@@ -68,17 +68,19 @@ const Landingpage = () => {
         yPercent:100, 
         scrollTrigger: {
           trigger: desktopRef.current,
-          start: "top 80%",   // Adjust to control when animation starts
+          start: "70 60%",   // Adjust to control when animation starts
           end: "top 40%",     // Adjust to control when animation ends
           scrub: true,
-          // markers: true,
+          markers:true
         }},
       )
   }, []);
 
   return (
-    <div className="w-screen flex flex-col items-center bg-white dark:bg-gray-900 text-gray-800 dark:text-white">
+    <div className="w-screen flex flex-col items-center relative bg-white dark:bg-gray-900 text-gray-800 dark:text-white">
       {/* Hero Section */}
+      <img className="absolute top-[25%] animate-bounce left-[25%] h-10  w-10" src="https://cdn3d.iconscout.com/3d/premium/thumb/bitcoin-sign-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--symbol-logo-crypto-coin-cryptocurrency-pack-illustrations-4466132.png" alt="" />
+      <img className="absolute top-[5%] animate-pulse left-[75%] h-20  w-20" src="https://cdn3d.iconscout.com/3d/premium/thumb/crypto-coins-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--bitcoin-logo-cryptocurrency-litecoin-pack-business-illustrations-4466124.png?f=webp" alt="" />
       <div className="flex flex-col items-center mt-16 px-6 text-center">
         <p className="flex items-center text-lg md:text-xl">
           Automating trades, ensuring
@@ -90,7 +92,7 @@ const Landingpage = () => {
         <h1 className="text-3xl md:text-5xl font-bold mt-4 leading-tight">
           Supercharge your investments with a new-age <br /> algo trading platform
         </h1>
-        <Button className="mt-6 px-6 py-3 text-lg">Get Started</Button>
+        <Button className="mt-6 cursor-pointer px-8 py-6 hover:bg-[#13A8A1] bg-[#13A8A1] text-lg">Get Started</Button>
       </div>
 
       {/* Image Section */}
@@ -118,7 +120,7 @@ const Landingpage = () => {
       {/* Bottom Image */}
       <img
         ref={desktopRef}
-        className="w-[80%] z-10 absolute top-[40%]"
+        className="w-[80%] z-10 absolute mt-10 md:mt-24"
         src="https://images.prismic.io/3commas/Z4hpFJbqstJ99gzI_create-dca.png?auto=format%2Ccompress&fit=max&w=2560&q=75"
         alt="DCA Strategy"
       />

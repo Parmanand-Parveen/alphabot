@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-      overflow-x-hidden
+     className="overflow-x-hidden"
       >
         <ThemeProvider attribute="class"
             defaultTheme="system"

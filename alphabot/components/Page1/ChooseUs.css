@@ -1,6 +1,7 @@
-body {
+.body {
     width: 100%;
     height: fit-content;
+    overflow: hidden;
     margin: 0;
     padding: 0;
   }
@@ -16,6 +17,7 @@ body {
     flex-basis: 50%;
     position: sticky;
     top: 0;
+    background-color:pink;
     left: 0;
   }
   .right {

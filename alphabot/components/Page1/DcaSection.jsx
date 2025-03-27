@@ -44,47 +44,69 @@ const DcaSection = () => {
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row items-center gap-10 px-6 lg:px-16 py-12 bg-gray-100 dark:bg-gray-900">
+   <div className="flex flex-col justify-center gap-6 my-7 px-6 lg:px-0 dark:bg-gray-900">
+   <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white text-center">
+  Experience Alphabot’s sleek array of features
+  <p className="text-sm sm:text-base md:text-lg text-muted-foreground mt-2">
+    Where innovation and elegance come together seamlessly
+  </p>
+</h2>
+
+   
+   <div className="flex flex-col md:flex-row gap-4 w-full items-center md:justify-center max-w-5xl lg:mx-auto">
+      
       {/* Left - Accordion Section */}
-      <div className="w-full lg:w-1/2">
+      <div className="w-full lg:w-1/2 ">
         {items.map((item, index) => (
-          <Collapsible key={index} className="mb-4 border-b border-gray-300 dark:border-gray-700">
+          <Collapsible key={index} open={selectedIndex === index} className="w-full">
             <CollapsibleTrigger
-              className="flex justify-between items-center w-full text-lg font-medium px-4 py-3 bg-white dark:bg-gray-800 rounded-md shadow-md cursor-pointer transition-all"
-              onClick={() => setSelectedIndex(index)}
+              className="flex justify-between border-b w-full border-gray-200 dark:border-gray-600 py-4 lg:px-6 hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+              onClick={() => setSelectedIndex(selectedIndex === index ? -1 : index)}
             >
               {item.title}
-              {selectedIndex === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+              <div>{selectedIndex === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}</div>
             </CollapsibleTrigger>
-            <CollapsibleContent>
+            <CollapsibleContent className="w-full text-left py-2 px-6 text-muted-foreground">
               <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                className="px-4 py-2 text-gray-600 dark:text-gray-300"
+                // initial={{ opacity: 0, height: 0 }}
+                // animate={{ opacity: 1, height: "auto" }}
+                // exit={{ opacity: 0, height: 0 }}
+                className="overflow-hidden"
               >
                 {item.content}
               </motion.div>
+              <motion.video
+          key={items[selectedIndex]?.video || ""}
+          src={items[selectedIndex]?.video || ""}
+          autoPlay
+          loop
+          muted
+          className="block md:hidden"
+          // initial={{ opacity: 0 }}
+          // animate={{ opacity: 1 }}
+          // transition={{ duration: 0.5 }}
+        ></motion.video>
             </CollapsibleContent>
           </Collapsible>
         ))}
       </div>
 
       {/* Right - Video Section */}
-      <div className="w-full lg:w-1/2 flex justify-center">
+      <div className="w-1/3 h-full hidden md:block bg-[#EAF5ED]">
         <motion.video
-          key={items[selectedIndex].video} // Ensures re-render when video changes
-          src={items[selectedIndex].video}
+          key={items[selectedIndex]?.video || ""}
+          src={items[selectedIndex]?.video || ""}
           autoPlay
           loop
           muted
-          className="w-full max-w-lg rounded-lg shadow-lg"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          className="p-8"
+          // initial={{ opacity: 0 }}
+          // animate={{ opacity: 1 }}
+          // transition={{ duration: 0.5 }}
         ></motion.video>
       </div>
     </div>
+   </div>
   );
 };
 

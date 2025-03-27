@@ -33,51 +33,52 @@ const steps = [
 ];
 
 const StepsSection = () => {
-  const { resolvedTheme } = useTheme();
+ 
   return (
     <div className="w-full py-16 px-6 text-center bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       {/* Section Title */}
       <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white">
-        Get started in <span className="text-blue-600 dark:text-blue-400">3 easy steps</span>
+        Get started in 3 easy steps
       </h2>
 
       {/* Steps Container */}
-      <div className="flex flex-wrap justify-center gap-8 mt-10">
-        {steps.map((step, index) => (
-          <motion.div
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-8 max-w-5xl  rounded mx-auto">
+        {steps.map((step, index) => ( 
+          <div
             key={index}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-            className={`p-6 rounded-2xl shadow-lg w-full md:w-1/3 bg-gradient-to-br hover:scale-105 ${
-              resolvedTheme === "dark" ? step.bgDark : step.bgLight
-            } text-white relative overflow-hidden transition-all duration-300`}
+            className="p-6 rounded-lg  flex bg-[#EAF5ED] flex-col items-center justify-between  dark:bg-gray-800 transition-colors duration-300"
           >
-            {/* Step Number with Glow Effect */}
-            <div className="absolute top-3 left-3 text-2xl font-bold bg-white text-gray-800 dark:bg-gray-200 dark:text-gray-900 rounded-full h-10 w-10 flex items-center justify-center shadow-lg">
-              {index + 1}
+        
+
+            {/* Step Title */}
+            <h3 className="text-lg font-semibold  text-gray-800 dark:text-white">
+              {index + 1}. {step.title}
+            </h3>
+
+            {/* Step Description */}
+            <p className="text-gray-600 text-left dark:text-gray-300">{step.description}</p>
+
+            {/* Button */}
+            <div className="mt-4">
+              {step.buttonText && (
+                <Button className="flex items-center gap-2">
+                {step.buttonText}
+                <FaArrowRight />
+             </Button>
+              )}
+
+                  {/* Step Image */}
+                  <div className="mt-4 overflow-hidden rounded h-auto">
+  <img
+    src={step.image}
+    alt={`Step ${index + 1}`}
+    className="w-full rounded bg-top transition-transform duration-300 ease-in-out hover:scale-110"
+  />
+</div>
             </div>
-
-            {/* Step Content */}
-            <h3 className="text-xl font-semibold mb-3 mt-6">{step.title}</h3>
-            <p className="text-sm mb-4">{step.description}</p>
-
-            {/* Button (Only for Step 1) */}
-            {step.buttonText && (
-              <Button className="bg-white text-gray-800 dark:bg-gray-200 dark:text-gray-900 px-4 py-2 rounded-md flex items-center gap-2 shadow-md hover:bg-gray-200 dark:hover:bg-gray-300 transition">
-                {step.buttonText} <FaArrowRight />
-              </Button>
-            )}
-
-            {/* Step Image */}
-            <motion.img
-              src={step.image}
-              alt={step.title}
-              className="mx-auto mt-6 w-40 drop-shadow-md"
-              whileHover={{ scale: 1.05 }}
-            />
-          </motion.div>
+          </div>
         ))}
+
       </div>
     </div>
   );
