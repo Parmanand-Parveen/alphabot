@@ -2,7 +2,6 @@
 import React from 'react'
 import {motion, useScroll} from "motion/react"
 import Landingpage from '@/components/Page1/Landingpage';
-import Page2 from '@/components/Page2';
 import StatsSection from '@/components/Page1/Section2';
 import StepsSection from '@/components/Page1/StepsSection';
 import DCASetup from '@/components/Page1/DcaSection';
