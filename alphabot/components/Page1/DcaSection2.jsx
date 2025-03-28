@@ -136,6 +136,28 @@ const DcaSection2 = () => {
                    <p className="text-sm text-gray-600 dark:text-gray-300 font-normal lg:ml-14"> 
                     {item.description}
                   </p>
+                  <figure
+               
+                  className="flex flex-col md:hidden sticky top-24 overflow-hidden duration-500 ease-in-out transition-all bg-gradient-to-b from-[#EAF5ED] to-[#EAF5F5] dark:from-gray-800 dark:to-gray-850 hover:from-[#E0F0E4] hover:to-[#DCEFEF] dark:hover:from-gray-700 dark:hover:to-gray-800 p-8 lg:p-10 rounded-2xl w-full max-w-md"
+                >
+               
+                  <div className="relative isolate overflow-hidden mx-auto w-full shadow-lg rounded-xl border-[10px] border-white dark:border-gray-600 aspect-[9/16] max-h-[553px] ">
+                  
+                    <video
+                      key={item.videoSrc} 
+                      preload="metadata" 
+                      autoPlay
+                      loop 
+                      muted 
+                      playsInline
+                      className="relative z-10 w-full h-[550px] object-cover"
+                      poster={item.posterSrc}
+                      src={item.videoSrc}
+                    />
+                  </div>
+                  
+                  <div className="w-full h-[100px] absolute bottom-0 left-0 bg-gradient-to-t from-[#EAF5F5] via-[#EAF5F5]/80 to-transparent dark:from-gray-850 dark:via-gray-850/80" aria-hidden="true"></div>
+                </figure>
                    <a
                     href={item.linkHref}
                     className="inline-flex items-center justify-start gap-1.5 w-fit text-sm font-semibold text-gray-500 hover:text-gray-900 focus:text-gray-900 dark:text-gray-400 dark:hover:text-white dark:focus:text-white transition-colors lg:ml-14" 

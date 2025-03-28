@@ -15,6 +15,7 @@ import Landingpage2 from '@/components/Page1/LandingPage2';
 import DcaSection2 from '@/components/Page1/DcaSection2';
 import { TimelineDemo } from '@/components/Page1/TimeLine';
 import Footer2 from '@/components/Page1/Footer2';
+import ChooseUs2 from '@/components/Page1/ChooseUs2';
 
 
 const Home = () => {
@@ -27,7 +28,7 @@ const {scrollYProgress} = useScroll();
        <TimelineDemo/>
        <StepsSection/>
        <DcaSection2/>
-       <ChooseUs/>
+       <ChooseUs2/>
        <OurTeam/>
        <AnimatedTestimonialsDemo/>
        <FAQSection/>
