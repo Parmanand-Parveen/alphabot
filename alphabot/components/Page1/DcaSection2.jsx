@@ -138,7 +138,7 @@ const DcaSection2 = () => {
                   </p>
                   <figure
                
-                  className="flex flex-col md:hidden sticky top-24 overflow-hidden duration-500 ease-in-out transition-all bg-gradient-to-b from-[#EAF5ED] to-[#EAF5F5] dark:from-gray-800 dark:to-gray-850 hover:from-[#E0F0E4] hover:to-[#DCEFEF] dark:hover:from-gray-700 dark:hover:to-gray-800 p-8 lg:p-10 rounded-2xl w-full max-w-md"
+                  className="flex flex-col md:hidden sticky top-24 overflow-hidden duration-500 ease-in-out transition-all bg-gradient-to-b from-[#EAF5ED] to-[#EAF5F5] dark:from-[#F4A460] dark:to-[#8B4513] hover:from-[#E0F0E4] hover:to-[#DCEFEF] dark:hover:from-gray-700 dark:hover:to-gray-800 p-8 lg:p-10 rounded-2xl w-full max-w-md"
                 >
                
                   <div className="relative isolate overflow-hidden mx-auto w-full shadow-lg rounded-xl border-[10px] border-white dark:border-gray-600 aspect-[9/16] max-h-[553px] ">
@@ -181,7 +181,7 @@ const DcaSection2 = () => {
              activeIndex === item.id && (
                 <figure
                   key={item.id}
-                  className="flex flex-col sticky top-24 overflow-hidden duration-500 ease-in-out transition-all bg-gradient-to-b from-[#EAF5ED] to-[#EAF5F5] dark:from-gray-800 dark:to-gray-850 hover:from-[#E0F0E4] hover:to-[#DCEFEF] dark:hover:from-gray-700 dark:hover:to-gray-800 p-8 lg:p-10 rounded-2xl w-full max-w-md"
+                  className="flex flex-col sticky top-24 overflow-hidden duration-500 ease-in-out transition-all bg-gradient-to-b from-[#EAF5ED] to-[#EAF5F5] dark:from-[#F4A460] dark:to-[#8B4513] hover:from-[#E0F0E4] hover:to-[#DCEFEF]  p-8 lg:p-10 rounded-2xl w-full max-w-md"
                 >
                
                   <div className="relative isolate overflow-hidden mx-auto w-full shadow-lg rounded-xl border-[10px] border-white dark:border-gray-600 aspect-[9/16] max-h-[553px] ">

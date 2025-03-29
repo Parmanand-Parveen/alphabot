@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Play } from "lucide-react";
+import { BackgroundBeams } from "../ui/background-beams";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -77,16 +78,14 @@ const Landingpage2 = () => {
   }, []);
 
   return (
-    <div className="w-screen flex flex-col items-center relative bg-[#EAF5F5] dark:bg-gray-900 text-gray-800 dark:text-white">
+    <div className="w-screen flex flex-col items-center relative z-10 text-gray-800 dark:text-white">
       {/* Hero Section */}
       <div className="flex flex-col items-center  px-6 text-center">
         <h1 className="text-3xl md:text-5xl text-center font-bold mt-4 leading-tight">
         Automate your crypto <br /> trading strategies
         </h1>
         <Button className="mt-6 cursor-pointer px-8 py-6 hover:bg-[#13A8A1] bg-[#13A8A1] text-lg">Start Free Trial</Button>
-        <p className="text-[10px] mt-0.5 font-sans uppercase ">No Credit card Required</p>
-        <h1 className="flex text-muted-foreground text-base mt-4"><Play/>Watch Video</h1>
-        <div className="flex-col  items-center  md:flex-row flex gap-4 md:gap-8 mt-4 text-xs">
+        <div className="flex-col  items-center  md:flex-row flex gap-8  mt-10 text-xs">
             <div className="flex md:flex-col items-center gap-2">
                <div className="flex">
                <img src="/person.svg" alt=""  className="w-4 h-4"/> 
@@ -96,7 +95,7 @@ const Landingpage2 = () => {
             </div>
             <div className="flex md:flex-col items-center gap-2">
                 <div className="flex items-center">
-                  <p className="text-[10px] text-muted-foreground">Rated <span className="text-black">Excellent</span> on</p>
+                  <p className="text-[10px] text-muted-foreground">Rated <span className="text-black dark:text-white ">Excellent</span> on</p>
                   <img className=" h-4" src="https://images.prismic.io/3commas/Z416PpbqstJ99nZy_Frame.png?auto=format%2Ccompress&fit=max&w=360" alt="" />
                 </div>
               <p className="text-[10px] text-muted-foreground text-left">1,479 Reviews</p>
@@ -118,7 +117,7 @@ const Landingpage2 = () => {
 
         <img
           ref={leftImgRef}
-          className=" md:hidden"
+          className=" md:hidden mt-10"
           src="https://images.prismic.io/3commas/Z4j08pbqstJ99hq9_mobile-coins-block.png?auto=format%2Ccompress&fit=max&w=768%201x,%20https://images.prismic.io/3commas/Z4j08pbqstJ99hq9_mobile-coins-block.png?auto=format%2Ccompress&fit=max&w=1920"
           alt="Left Coins"
         />
@@ -152,6 +151,7 @@ const Landingpage2 = () => {
         src="https://images.prismic.io/3commas/Z4hpFJbqstJ99gzI_create-dca.png?auto=format%2Ccompress&fit=max&w=2560&q=75"
         alt="DCA Strategy"
       />
+      <BackgroundBeams className="-z-10"/>
     </div>
   );
 };

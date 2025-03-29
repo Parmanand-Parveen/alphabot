@@ -21,7 +21,7 @@ const Home = () => {
 const {scrollYProgress} = useScroll();
 
   return (
-    <div className=' overflow-x-hidden dark:bg-gray-900 font-serif'>
+    <div className=' overflow-x-hidden dark:bg-[#0A0A0A] font-serif'>
        <Landingpage2/>
        <StatsSection/>
        <TimelineDemo/>

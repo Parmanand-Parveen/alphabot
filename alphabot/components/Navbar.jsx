@@ -3,25 +3,27 @@ import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import { ModeToggle } from "./ModeToggle";
+import { BackgroundBeams } from "./ui/background-beams";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white dark:bg-gray-900 shadow-md">
+    <nav className=" z-10  shadow-md">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <div>
-          <img src="/assets/Logo/alphabotslogo.png" alt="Logo" className="h-16 w-20" />
+          <img src="/assets/Logo/alphabotslogo2.png" alt="Logo" className="h-16 aspect-auto" />
         </div>
 
         {/* Desktop Nav */}
         <ul className="hidden md:flex space-x-6 text-gray-700 dark:text-white">
-          <li className="hover:text-blue-500 cursor-pointer">Home</li>
-          <li className="hover:text-blue-500 cursor-pointer">About</li>
-          <li className="hover:text-blue-500 cursor-pointer">Products</li>
-          <li className="hover:text-blue-500 cursor-pointer">Blogs</li>
-          <li className="hover:text-blue-500 cursor-pointer">Contacts</li>
+          <li className="hover:text-[#F4A460] cursor-pointer">Home</li>
+          <li className="hover:text-[#F4A460] cursor-pointer">Features</li>
+          <li className="hover:text-[#F4A460] cursor-pointer">About</li>
+          <li className="hover:text-[#F4A460] cursor-pointer">Products</li>
+          <li className="hover:text-[#F4A460] cursor-pointer">Blogs</li>
+          <li className="hover:text-[#F4A460] cursor-pointer">Contacts</li>
         </ul>
 
         {/* Buttons */}
@@ -42,7 +44,7 @@ const Navbar = () => {
 
       {/* Mobile Nav */}
       {isOpen && (
-        <ul className="md:hidden flex flex-col items-center bg-white dark:bg-gray-900 py-4 space-y-4 text-gray-700 dark:text-white">
+        <ul className="md:hidden flex flex-col items-center bg-white dark:bg-[#0A0A0A] py-4 space-y-4 text-gray-700 dark:text-white">
           <li className="hover:text-blue-500 cursor-pointer">Home</li>
           <li className="hover:text-blue-500 cursor-pointer">About</li>
           <li className="hover:text-blue-500 cursor-pointer">Products</li>
@@ -54,6 +56,7 @@ const Navbar = () => {
           </div>
         </ul>
       )}
+      <BackgroundBeams  className="-z-10" />
     </nav>
   );
 };

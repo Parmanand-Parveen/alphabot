@@ -62,7 +62,7 @@ const StepsSection = () => {
   ];
 
   return (
-    <section className=" mx-auto max-w-6xl">
+    <section className=" mx-auto mt-10 max-w-6xl">
       <header className="flex flex-col gap-2 text-center mb-8 lg:mb-16 lg:gap-3">
         <h2
           id="get-started-in-3-easy-steps"
@@ -76,7 +76,7 @@ const StepsSection = () => {
           <li
             key={step.id}
            
-            className="flex flex-col justify-between rounded-2xl gap-5 overflow-hidden w-full md:w-[calc(50%-theme(spacing.3))] lg:w-[calc(33.333%-theme(spacing.4))] bg-gradient-to-b from-[#EAF5ED] to-[#EAF5F5] dark:from-gray-800 dark:to-gray-850"
+            className="flex flex-col justify-between rounded-2xl gap-5 overflow-hidden w-full md:w-[calc(50%-theme(spacing.3))] lg:w-[calc(33.333%-theme(spacing.4))] bg-gradient-to-b from-[#EAF5ED] to-[#EAF5F5] dark:from-[#F4A460] dark:to-[#8B4513]"
           >
             {/* Text Content Area */}
             <div className="flex flex-col gap-2 pt-8 px-6 md:pt-10 md:px-8"> 

@@ -17,7 +17,7 @@ const OurTeam = () => {
   ];
 
   return (
-    <div className="bg-gray-900 text-white py-16">
+    <div className="bg-[#0A0A0A] text-white py-16">
       <div className="container mx-auto text-center">
         <h2 className="uppercase text-sm mb-2">Our Team</h2>
         <h3 className="text-3xl font-semibold mb-8">Together We Grow!</h3>

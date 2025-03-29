@@ -76,7 +76,7 @@ const Landingpage = () => {
   }, []);
 
   return (
-    <div className="w-screen flex flex-col items-center relative bg-white dark:bg-gray-900 text-gray-800 dark:text-white">
+    <div className="w-screen flex flex-col items-center relative bg-white dark:bg-[#0A0A0A] text-gray-800 dark:text-white">
       {/* Hero Section */}
       <img className="absolute top-[25%] animate-bounce left-[25%] h-10  w-10" src="https://cdn3d.iconscout.com/3d/premium/thumb/bitcoin-sign-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--symbol-logo-crypto-coin-cryptocurrency-pack-illustrations-4466132.png" alt="" />
       <img className="absolute top-[5%] animate-pulse left-[75%] h-20  w-20" src="https://cdn3d.iconscout.com/3d/premium/thumb/crypto-coins-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--bitcoin-logo-cryptocurrency-litecoin-pack-business-illustrations-4466124.png?f=webp" alt="" />

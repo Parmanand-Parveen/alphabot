@@ -78,7 +78,7 @@ const ChooseUs = () => {
   return (
     <div ref={sectionRef} className="w-full min-h-screen flex flex-col lg:flex-row overflow-hidden">
       {/* Left Section */}
-      <div className="h-auto lg:h-screen w-full lg:w-1/2 flex flex-col items-center justify-center p-6 lg:p-8 bg-white dark:bg-gray-900">
+      <div className="h-auto lg:h-screen w-full lg:w-1/2 flex flex-col items-center justify-center p-6 lg:p-8 bg-white dark:bg-[#0A0A0A]">
         <div className="w-full max-w-[420px] text-[clamp(36px,8vw,84px)] font-bold leading-tight text-gray-900 dark:text-white">
           Our programs
         </div>

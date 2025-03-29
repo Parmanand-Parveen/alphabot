@@ -15,9 +15,9 @@ const faqs = [
 ];
 
 const FAQItem = ({ faq, isOpen, onClick }) => (
-  <div className="border-b border-gray-200 dark:border-gray-600">
+  <div className="border-b border-gray-200 dark:border-[rgba(255,255,255,0.1)]">
     <button
-      className="w-full text-left py-4 px-6 flex justify-between items-center hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+      className="w-full text-left py-4 px-6 flex justify-between items-center hover:bg-gray-100 dark:hover:bg-[rgba(255,255,255,0.099)] transition"
       onClick={onClick}
     >
       <span className="text-lg font-medium text-gray-900 dark:text-white">{faq.question}</span>
@@ -40,7 +40,7 @@ const FAQSection = () => {
   return (
     <div className="max-w-3xl mx-auto my-12 px-4">
       <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white">FAQ</h2>
-      <div className="bg-white dark:bg-gray-800 shadow-md rounded-lg">
+      <div className="bg-white dark:bg-[rgba(0,0,0,0.7)] shadow-md rounded-lg">
         {faqs.map((faq, index) => (
           <FAQItem
             key={index}

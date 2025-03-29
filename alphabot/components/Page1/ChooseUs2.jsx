@@ -32,7 +32,7 @@ const ChooseUs2 = () => {
 
   return (
    
-    <div className="py-16 md:py-24 bg-white overflow-hidden dark:bg-gray-900 dark:text-white">
+    <div className="py-16 md:py-24 bg-white overflow-hidden dark:bg-[#0A0A0A] dark:text-white">
    
       <div className="container mx-auto px-4">
 

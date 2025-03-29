@@ -12,7 +12,7 @@ const StatsSection = () => {
   ]
 
   return (
-    <div className=" dark:bg-gray-900 py-12 md:py-24 transition-colors duration-300">
+    <div className=" dark:bg-[#0A0A0A] py-12 md:py-24 transition-colors duration-300">
       <div className="container mx-auto px-4">
         {/* Title */}
         <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-gray-900 dark:text-white">
@@ -20,11 +20,11 @@ const StatsSection = () => {
         </h2>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 hover:scale-105 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="text-center p-6 rounded-lg  bg-white dark:bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              className="text-center p-6 rounded-lg  bg-white dark:bg-[#0A0A0A] transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               <div className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-2">
                 {stat.value}

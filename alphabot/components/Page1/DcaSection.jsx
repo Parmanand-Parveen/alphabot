@@ -44,7 +44,7 @@ const DcaSection = () => {
   ];
 
   return (
-   <div className="flex flex-col justify-center gap-6 my-7 px-6 lg:px-0 dark:bg-gray-900">
+   <div className="flex flex-col justify-center gap-6 my-7 px-6 lg:px-0 dark:bg-[#0A0A0A]">
    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white text-center">
   Experience Alphabot’s sleek array of features
   <p className="text-sm sm:text-base md:text-lg text-muted-foreground mt-2">
